@@ -8,7 +8,7 @@ import tasksRouter from "./routes/tasks.routes.js";
 const app = express();
 app.use(
   cors({
-    origin: "https://admi-tarea-front-7lzd.vercel.app/",
+    origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
@@ -16,6 +16,7 @@ app.use(
 );
 //al establecer las credentials en true permitimos que se establezcan en las solicitudes entre dominios
 //con esto le estoy diciendo que solo se comunique con el puerto 5173 osea la comunicacion con el frontend
+//http://localhost:5173  este es el fornt de manera local
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
