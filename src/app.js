@@ -10,6 +10,8 @@ app.use(
   cors({
     origin: "http://localhost:5173",
     credentials: true,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
   })
 );
 //al establecer las credentials en true permitimos que se establezcan en las solicitudes entre dominios
@@ -21,6 +23,21 @@ app.use(cookieParser());
 // estos son mi middleware Nota1
 app.use(authRoutes);
 app.use(tasksRouter);
+
+//esto es de prueba
+app.get("/generar-token", (req, res) => {
+  const token = "tu-token-de-autenticacion";
+
+  // Configurar la cookie como segura y con SameSite "none"
+  res.cookie("miToken", token, {
+    secure: true, // Solo se enviará en conexiones HTTPS
+    sameSite: "none", // Permite que se envíe desde dominios diferentes
+    httpOnly: true, // La cookie solo puede ser accedida por el servidor
+  });
+
+  res.send("Token generado y cookie configurada");
+});
+
 export default app;
 
 //Nota 1: un middleware podemos decir que es un intermediario que se situa entre el cliente y el servidor

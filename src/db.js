@@ -11,4 +11,6 @@ export const connectDB = async () => {
     console.log(error);
   }
 };
-//mongodb://localhost/merndb    esta es la coneccion  a la base mongo que esta en mi computadora
+//mongodb://localhost/merndb    esta es la coneccion  a la base mongo que esta en mi computadora esto va en connect
+
+//
