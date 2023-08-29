@@ -8,7 +8,7 @@ import tasksRouter from "./routes/tasks.routes.js";
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://admi-tarea-front-7lzd.vercel.app/",
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     allowedHeaders: "Content-Type,Authorization",
