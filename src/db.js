@@ -13,4 +13,4 @@ export const connectDB = async () => {
 };
 //mongodb://localhost/merndb    esta es la coneccion  a la base mongo que esta en mi computadora esto va en connect
 
-//
+//mongodb+srv://enzoantilipi1:borcella8@cluster0.fgxcl2z.mongodb.net/?retryWrites=true&w=majority
