@@ -40,7 +40,7 @@ const corsOptions = {
   exposedHeaders: "Access-Control-Allow-Origin",
   credentials: true,
 };
-app.use(corsOptions);
+app.use(cors(corsOptions));
 // app.use(
 //   cors({
 //     origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",
