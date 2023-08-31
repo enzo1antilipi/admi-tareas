@@ -32,7 +32,15 @@ const app = express();
 //     );
 //   next();
 // });
-app.use(cors());
+//app.use(cors());
+const corsOptions = {
+  origin: ["https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app"],
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "Content-Type,Authorization",
+  exposedHeaders: "Access-Control-Allow-Origin",
+  credentials: true,
+};
+app.enableCors(corsOptions);
 // app.use(
 //   cors({
 //     origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",
