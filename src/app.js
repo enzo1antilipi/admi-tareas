@@ -15,28 +15,28 @@ const app = express();
 
 // app.use(cors(corsOptions));
 //
-app.use(function (req, res, next) {
-  res.header("Acess-Control-Allow-Origin", "*");
-  res.header(
-    "Acces-Control-Allow-Methods",
-    "GET",
-    "HEAD",
-    "OPTIONS",
-    "POST",
-    "PUT",
-    "DELETE"
-  ),
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type,Accept ,Authorization"
-    );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.header("Acess-Control-Allow-Origin", "*");
+//   res.header(
+//     "Acces-Control-Allow-Methods",
+//     "GET",
+//     "HEAD",
+//     "OPTIONS",
+//     "POST",
+//     "PUT",
+//     "DELETE"
+//   ),
+//     res.header(
+//       "Access-Control-Allow-Headers",
+//       "Origin, X-Requested-With, Content-Type,Accept ,Authorization"
+//     );
+//   next();
+// });
 app.use(cors());
 app.use(
   cors({
     origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",
-    allowedHeaders: "*",
+    credentials: true,
   })
 );
 //al establecer las credentials en true permitimos que se establezcan en las solicitudes entre dominios
