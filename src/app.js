@@ -34,7 +34,7 @@ const app = express();
 // });
 //app.use(cors());
 const corsOptions = {
-  origin: ["https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app"],
+  origin: ["admi-tarea-front-7lzd-qxx6x74mw-enzo1antilipi.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   exposedHeaders: "Access-Control-Allow-Origin",
@@ -43,7 +43,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 // app.use(
 //   cors({
-//     origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",
+//     origin: "https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app",este anda
 //     credentials: true,
 //   })
 // );

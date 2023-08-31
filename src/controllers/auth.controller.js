@@ -22,7 +22,11 @@ export const register = async (req, res) => {
     const userSaved = await newUser.save();
     const token = await creadAccesToken({ id: userSaved._id });
 
-    res.cookie("token", token);
+    res.cookie("token", token, {
+      sameSite: "none", //apartir de aca es nuevo
+      secure: true,
+      httOnly: false,
+    });
     res.json({
       id: userSaved._id,
       username: userSaved.username,
