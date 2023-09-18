@@ -94,10 +94,10 @@ export const verifyToken = async (req, res) => {
 
   if (!token) return res.status(401).json({ meessage: "Unauthorized" });
 
-  jwt.verify(token, TOKEN_SECRET, (err, user) => {
+  jwt.verify(token, TOKEN_SECRET, async (err, user) => {
     if (err) return res.status(401).json({ meessage: "Unauthorized" });
 
-    const userFound = User.findById(user.id);
+    const userFound = await User.findById(user.id);
     if (!userFound) return res.status(401).json({ meessage: "Unauthorized" });
 
     return res.json({
@@ -109,3 +109,4 @@ export const verifyToken = async (req, res) => {
     });
   });
 };
+//agrege en la linea 97 async y en la 100 await

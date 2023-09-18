@@ -7,31 +7,6 @@ import authRoutes from "./routes/auth.routes.js";
 import tasksRouter from "./routes/tasks.routes.js";
 const app = express();
 
-// const corsOptions = {
-//   origin: "*",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
-// };
-
-// app.use(cors(corsOptions));
-//
-// app.use(function (req, res, next) {
-//   res.header("Acess-Control-Allow-Origin", "*");
-//   res.header(
-//     "Acces-Control-Allow-Methods",
-//     "GET",
-//     "HEAD",
-//     "OPTIONS",
-//     "POST",
-//     "PUT",
-//     "DELETE"
-//   ),
-//     res.header(
-//       "Access-Control-Allow-Headers",
-//       "Origin, X-Requested-With, Content-Type,Accept ,Authorization"
-//     );
-//   next();
-// });
 //app.use(cors());
 const corsOptions = {
   origin: ["https://admi-tarea-front-7lzd-qxx6x74mw-enzo1antilipi.vercel.app"],
