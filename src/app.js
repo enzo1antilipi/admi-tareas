@@ -9,7 +9,7 @@ const app = express();
 
 //app.use(cors());
 const corsOptions = {
-  origin: ["https://admi-tarea-front-7lzd-dlmybn6ee-enzo1antilipi.vercel.app/"],
+  origin: ["https://admi-tarea-front-7lzd-dlmybn6ee-enzo1antilipi.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   exposedHeaders: "Access-Control-Allow-Origin",
