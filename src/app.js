@@ -9,7 +9,7 @@ const app = express();
 
 //app.use(cors());
 const corsOptions = {
-  origin: ["https://admi-tarea-front-7lzd-dlmybn6ee-enzo1antilipi.vercel.app"],
+  origin: ["https://admi-tarea-front-7lzd-ie5uyno8c-enzo1antilipi.vercel.app"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   allowedHeaders: "Content-Type,Authorization",
   exposedHeaders: "Access-Control-Allow-Origin",
@@ -25,6 +25,7 @@ app.use(cors(corsOptions));
 //al establecer las credentials en true permitimos que se establezcan en las solicitudes entre dominios
 //con esto le estoy diciendo que solo se comunique con el puerto 5173 osea la comunicacion con el frontend
 //http://localhost:5173  este es el fornt de manera local
+//https://admi-tarea-front-7lzd-dlmybn6ee-enzo1antilipi.vercel.app  ULTIMO link que andaba
 //https://admi-tarea-front-7lzd-ap4ymu0o3-enzo1antilipi.vercel.app
 
 //nota el error de cors me vuelve a aparecer cuando cambio al link de vercel
